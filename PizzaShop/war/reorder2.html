@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>注文修正</title>
+    <script type="text/javascript" src="lib.js"></script>
+        <script type="text/javascript">
+        <!--
+        function initial(){
+            var datas = getQuery();
+            getData(datas.id);
+        }
+         
+        function callback(request){
+            var arr = eval(request.responseText);
+            var data = arr[0];
+            document.getElementById("id").value = data.id;
+            document.getElementById("title").value = data.title;
+            document.getElementById("address").value = data.address;
+            document.getElementById("comment").value = data.comment;
+        }
+        //-->
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style media="screen and (min-device-width:481px)" >
+#site-box{
+background-color: #F5D0A9;
+ border: 1px solid #000000;
+ margin : 5px auto;
+ width:752px;
+ border: 1px solid #000000;
+ margin : 5px auto;
+ 
+ }
+#left-box{
+ float: left;
+ width: 200px;
+          background-color: #F5D0A9;
+}
+#right-box{
+ float: right;
+ width: 550px;
+  background-color: #FFFFFF;
+}
+
+#footer-box{
+ clear: both;
+ width: 732px;
+ clear : both ;
+}
+.ca {
+          display:block;
+ padding: 10px;
+ margin: 10px;
+         text-align: center;
+         font-style: italic;
+         font-weight: bold;
+ background-color: #FFFFFF;
+}
+.paa{
+ margin : 0pt 0pt 10pt 10pt;
+}
+</style>
+    </head>
+    <body onload="initial();"　 bgcolor="#ffffff" text="#000000" link="#61380B" vlink="#61380B" alink="#61380B">
+        <div id="site-box"><div id="header-box">
+<br>
+<br>
+<h1>Pizza Shop</h1>
+</div><div id="left-box">
+<center>
+<span class="ca"><a href="index.html">top</a></span>
+<span class="ca"><a href="menu.html">menu</a></span>
+<span class="ca"><a href="order.html">order</a></span>
+<span class="ca"><a href="history.html">history</a></span>
+</center>
+</div>
+<div id="right-box">
+<div class="pa">
+      <h2>reorder</h2><br>
+      <center>
+        <table>
+        <form method="post" action="/edit">
+            <input type="hidden" id="id" name="id">
+            <tr><th>氏名:</th><td><input type="text" id="title" name="title"></td></tr>
+            <tr><th>住所:</th><td><input type="text" id="address" name="address"></td></tr>
+            <tr><th>注文:</th><td><textarea id="comment" name="comment"></textarea></td></tr>
+            <tr><th></th><td><input type="submit" value="追加"></td></tr>
+        </form>
+        </table>
+        </center>
+        <p>注文の欄にあなたの注文したいピザの名前、枚数を書き込んでください</p>
+</div></div><div id="footer-box">
+</div></div>    
+    </body>
+</html>
